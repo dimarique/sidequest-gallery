@@ -1,0 +1,22 @@
+import styles from "./GalleryContent.module.css";
+import img0 from "../../data/image_0.jpg";
+import img1 from "../../data/image_1.jpg";
+import img2 from "../../data/image_2.jpg";
+import img3 from "../../data/image_3.jpg";
+import img4 from "../../data/image_4.jpg";
+import img5 from "../../data/image_5.jpg";
+import img6 from "../../data/image_6.jpg";
+import img7 from "../../data/image_7.jpg";
+import img8 from "../../data/image_8.jpg";
+import img9 from "../../data/image_9.jpg";
+
+const GalleryContent = () => {
+  const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
+  return (
+    <div className={styles.galleryContent}>
+      <img src={images[0]} alt="" />
+    </div>
+  );
+};
+
+export default GalleryContent;

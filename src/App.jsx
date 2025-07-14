@@ -12,18 +12,26 @@ import img7 from "./data/image_7.jpg";
 import img8 from "./data/image_8.jpg";
 import img9 from "./data/image_9.jpg";
 
-import ButtonNext from "./components/GalleryContent/ButtonNext";
+import ButtonNext from "./components/ButtonNext/ButtonNext";
 import { useState } from "react";
 
 function App() {
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <>
-      <GalleryContent currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} images={images} />
-      <ButtonNext currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} images={images} />
+      <GalleryContent
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        images={images}
+      />
+      <ButtonNext
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        images={images}
+      />
     </>
   );
 }

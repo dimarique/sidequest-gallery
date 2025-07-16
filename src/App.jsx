@@ -17,7 +17,7 @@ import ButtonPrev from "./components/ButtonPrev/ButtonPrev";
 import { useState } from "react";
 
 function App() {
-  fetch('https://janawalt.github.io/gallery-api/galleryData.json')
+  fetch("https://janawalt.github.io/gallery-api/galleryData.json");
 
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
@@ -35,11 +35,13 @@ function App() {
         setCurrentIndex={setCurrentIndex}
         images={images}
       />
-      <ButtonPlayPause images={images} />
+      {/* <ButtonPlayPause images={images} /> */}
 
-      <ButtonPrev currentIndex={currentIndex}
+      <ButtonPrev
+        currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
-        images={images} />
+        images={images}
+      />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ButtonPrev.module.css'
+import styles from '../ButtonStyles/ButtonStyles.module.css'
 
 const ButtonPrev = ({ currentIndex, setCurrentIndex, images }) => {
 
@@ -8,9 +8,9 @@ const ButtonPrev = ({ currentIndex, setCurrentIndex, images }) => {
     }
 
     return (
-        <div>
+        <>
             <button className={styles.buttonPrev} onClick={handlePrev}>Prev</button>
-        </div>
+        </>
     )
 }
 

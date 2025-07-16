@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ButtonNext.module.css'
+import styles from '../ButtonStyles/ButtonStyles.module.css'
 
 const ButtonNext = ({ currentIndex, setCurrentIndex, images }) => {
 
@@ -11,9 +11,9 @@ const ButtonNext = ({ currentIndex, setCurrentIndex, images }) => {
     }
 
     return (
-        <div>
+        <>
             <button className={styles.buttonNext} onClick={handleNext}>Next</button>
-        </div>
+        </>
     )
 }
 

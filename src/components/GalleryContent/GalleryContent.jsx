@@ -12,6 +12,7 @@ import img9 from "../../data/image_9.jpg";
 
 const GalleryContent = () => {
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
+  
   return (
     <div className={styles.galleryContent}>
       <img src={images[0]} alt="" />

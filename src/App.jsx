@@ -19,6 +19,8 @@ import ButtonWrapper from "./components/ButtonWrapper/ButtonWrapper";
 
 function App() {
 
+
+
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,6 +32,7 @@ function App() {
         setCurrentIndex={setCurrentIndex}
         images={images}
       />
+
 
 
       <ButtonWrapper>
@@ -47,6 +50,7 @@ function App() {
 
 
       </ButtonWrapper>
+
     </>
   );
 }

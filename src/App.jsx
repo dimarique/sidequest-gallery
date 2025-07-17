@@ -16,11 +16,9 @@ import ButtonNext from "./components/ButtonNext/ButtonNext";
 import ButtonPrev from "./components/ButtonPrev/ButtonPrev";
 
 import ButtonWrapper from "./components/ButtonWrapper/ButtonWrapper";
+import ImagesRibbon from "./components/ImagesRibbon/ImagesRibbon";
 
 function App() {
-
-
-
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,12 +31,18 @@ function App() {
         images={images}
       />
 
-
+      <ImagesRibbon
+        images={images}
+        setCurrentIndex={setCurrentIndex}
+        currentIndex={currentIndex}
+      />
 
       <ButtonWrapper>
-        <ButtonPrev currentIndex={currentIndex}
+        <ButtonPrev
+          currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
-          images={images} />
+          images={images}
+        />
 
         {/* <ButtonPlayPause images={images} /> */}
 
@@ -47,10 +51,7 @@ function App() {
           setCurrentIndex={setCurrentIndex}
           images={images}
         />
-
-
       </ButtonWrapper>
-
     </>
   );
 }

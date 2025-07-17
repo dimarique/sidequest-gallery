@@ -1,0 +1,20 @@
+.imagesRibbon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  scrollbar-width: none;
+  width: 800px;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.pic {
+  max-height: 100px;
+  width: auto;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 80%;
+  }
+}

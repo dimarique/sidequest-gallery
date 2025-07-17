@@ -3,16 +3,15 @@ import styles from "./ImagesRibbon.module.css";
 const ImagesRibbon = ({ images, currentIndex, setCurrentIndex }) => {
   return (
     <div className={styles.imagesRibbon}>
-      {images.map((img, idx) => {
-        if (idx === currentIndex) {
-          console.log(idx);
+      {images.map((image, imageIdx) => {
+        if (imageIdx === currentIndex) {
         }
         return (
           <img
-            onClick={() => setCurrentIndex(idx)}
-            className={styles.pic}
-            key={idx}
-            src={img}
+            onClick={() => setCurrentIndex(imageIdx)}
+            className={styles.img}
+            key={imageIdx}
+            src={image}
             alt=""
           />
         );

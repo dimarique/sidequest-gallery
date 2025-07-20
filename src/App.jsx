@@ -17,6 +17,7 @@ import ButtonPrev from "./components/ButtonPrev/ButtonPrev";
 
 import ButtonWrapper from "./components/ButtonWrapper/ButtonWrapper";
 import ImagesRibbon from "./components/ImagesRibbon/ImagesRibbon";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <LoginForm />
       <GalleryContent
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}

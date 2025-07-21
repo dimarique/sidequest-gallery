@@ -37,7 +37,11 @@ function App() {
         setCurrentIndex={setCurrentIndex}
         images={images}
       />
-      <ButtonPlayPause images={images} />
+      <PlayStopButton
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        images={images}
+      />
 
       <ButtonPrev currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}

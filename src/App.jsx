@@ -1,5 +1,7 @@
 import "./App.css";
+
 import { useState } from "react";
+
 
 import img0 from "./data/image_0.jpg";
 import img1 from "./data/image_1.jpg";
@@ -20,6 +22,7 @@ import ImagesRibbon from "./components/ImagesRibbon/ImagesRibbon";
 import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
+
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,28 +35,22 @@ function App() {
         setCurrentIndex={setCurrentIndex}
         images={images}
       />
+      <ButtonNext
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        images={images}
+      />
+      <PlayStopButton
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        images={images}
+      />
 
       <ImagesRibbon
         images={images}
         setCurrentIndex={setCurrentIndex}
-        currentIndex={currentIndex}
-      />
+         />
 
-      <ButtonWrapper>
-        <ButtonPrev
-          currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
-          images={images}
-        />
-
-        {/* <ButtonPlayPause images={images} /> */}
-
-        <ButtonNext
-          currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
-          images={images}
-        />
-      </ButtonWrapper>
     </>
   );
 }

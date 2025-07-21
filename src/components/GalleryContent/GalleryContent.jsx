@@ -7,7 +7,7 @@ const GalleryContent = ({ currentIndex, images }) => {
 
   return (
     <div className={styles.galleryContent}>
-      <img src={images[currentIndex]} alt="" />
+      <img src={images[currentIndex]} alt="galleryImg" />
     </div>
   );
 };

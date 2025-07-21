@@ -1,0 +1,30 @@
+.imagesRibbon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  scrollbar-width: none;
+  width: 800px;
+  gap: 4px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.img {
+  height: 100px;
+  width: auto;
+  transition: opacity 0.1s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 80%;
+  }
+
+  &:first-child {
+    mask-image: linear-gradient(to right, transparent, black 40%);
+  }
+
+  &:last-child {
+    mask-image: linear-gradient(to left, transparent, black 40%);
+  }
+}

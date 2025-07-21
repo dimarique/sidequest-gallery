@@ -1,6 +1,7 @@
 import "./App.css";
-import GalleryContent from "./components/GalleryContent/GalleryContent";
-import PlayStopButton from "./components/GalleryContent/PlayStopButton/PlayStopButton";
+
+import { useState } from "react";
+
 
 import img0 from "./data/image_0.jpg";
 import img1 from "./data/image_1.jpg";
@@ -12,14 +13,15 @@ import img6 from "./data/image_6.jpg";
 import img7 from "./data/image_7.jpg";
 import img8 from "./data/image_8.jpg";
 import img9 from "./data/image_9.jpg";
-
+import GalleryContent from "./components/GalleryContent/GalleryContent";
 import ButtonNext from "./components/ButtonNext/ButtonNext";
 import ButtonPrev from "./components/ButtonPrev/ButtonPrev";
-import { useState } from "react";
+
+import ButtonWrapper from "./components/ButtonWrapper/ButtonWrapper";
+import ImagesRibbon from "./components/ImagesRibbon/ImagesRibbon";
+import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
-
-  fetch('https://janawalt.github.io/gallery-api/galleryData.json')
 
   const images = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
@@ -27,6 +29,7 @@ function App() {
 
   return (
     <>
+      <LoginForm />
       <GalleryContent
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
@@ -43,9 +46,10 @@ function App() {
         images={images}
       />
 
-      <ButtonPrev currentIndex={currentIndex}
+      <ImagesRibbon
+        images={images}
         setCurrentIndex={setCurrentIndex}
-        images={images} />
+         />
 
     </>
   );

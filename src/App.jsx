@@ -12,7 +12,7 @@ import LoginForm from "./components/LoginForm/LoginForm";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [category, setCategory] = useState("&category=people");
+  const [category, setCategory] = useState("&category=backgrounds");
   const images = useGetData(category);
 
   if (images.length === 0) {

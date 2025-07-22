@@ -1,2 +1,9 @@
 .galleryContent {
+  background-color: lightgrey;
+}
+
+.galleryContent img {
+  padding: 4px 0;
+  max-width: 100%;
+  max-height: 600px;
 }

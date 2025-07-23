@@ -1,2 +1,14 @@
-.galleryContent {
+.galleryContent{
+    position: relative;
+   
+
 }
+.favoriteIcon{
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+

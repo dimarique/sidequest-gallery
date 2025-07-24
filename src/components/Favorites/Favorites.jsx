@@ -23,13 +23,16 @@ export default function Favorite({ imageId }) {
       setFavorites((prev) => [...prev, imageId]);
     }
   };
+  const removeFavorite = () => {
+    setFavorites((prev) => prev.filter((id) => id !== imageId));
+  };
 
   return (
     <div className={styles.galleryContent}>
            <img 
         className={styles.favoriteIcon}
         src={favorites.includes(imageId) ? StarFilled : StarEmpty}
-        alt=""  onClick={addFavorite}
+        alt=""  onClick={favorites.includes(imageId) ? removeFavorite : addFavorite}
       />
     </div>
     );

@@ -29,6 +29,7 @@ function App() {
   return (
     <>
       <LoginForm />
+      <Favorites imageId={images[currentIndex]} />
       <GalleryContent
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
@@ -52,7 +53,7 @@ function App() {
           images={images}
         />
       </ButtonWrapper>
-      <Favorites imageId={images[currentIndex]} />
+      
     </>
   );
 }

@@ -11,7 +11,7 @@ const PlayStopButton = ({ setCurrentIndex, images }) => {
 
   useEffect(() => {
     if (isPlaying) {
-      const intervalId = setInterval(autoPlay, 1000);
+      const intervalId = setInterval(autoPlay, 2000);
       setIntervalId(intervalId);
     } else {
       clearInterval(intervalId);

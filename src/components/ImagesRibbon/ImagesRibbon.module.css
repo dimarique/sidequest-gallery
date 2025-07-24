@@ -4,10 +4,12 @@
   flex-wrap: nowrap;
   overflow: scroll;
   scrollbar-width: none;
-  width: 800px;
+  max-width: 100%;
   gap: 4px;
   margin-bottom: 20px;
+  padding-bottom: 5px;
   align-items: center;
+  background-color: black;
 }
 
 .img {

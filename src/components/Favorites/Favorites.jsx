@@ -1,21 +1,20 @@
-
-import { useState, useEffect } from 'react';
-import styles from '../GalleryContent/GalleryContent.module.css';
-import StarEmpty from './Image/StarEmpty.png'
-import StarFilled from './Image/StarFilled.png';
+import { useState, useEffect } from "react";
+import StarEmpty from "./Image/StarEmpty.png";
+import styles from "./Favorites.module.css";
+import StarFilled from "./Image/StarFilled.png";
 
 export default function Favorite({ imageId }) {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    const storedFavorites = localStorage.getItem('favorites');
+    const storedFavorites = localStorage.getItem("favorites");
     if (storedFavorites) {
       setFavorites(JSON.parse(storedFavorites));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 
   const addFavorite = () => {
@@ -29,13 +28,12 @@ export default function Favorite({ imageId }) {
 
   return (
     <div className={styles.galleryContent}>
-           <img 
+      <img
         className={styles.favoriteIcon}
         src={favorites.includes(imageId) ? StarFilled : StarEmpty}
-        alt=""  onClick={favorites.includes(imageId) ? removeFavorite : addFavorite}
+        alt=""
+        onClick={favorites.includes(imageId) ? removeFavorite : addFavorite}
       />
     </div>
-    );
+  );
 }
-
-

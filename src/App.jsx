@@ -22,7 +22,6 @@ function App() {
   return (
     <div className="content_wrapper">
       <LoginForm />
-      <Favorites imageId={images[currentIndex]} />
       <GalleryContent
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
@@ -46,9 +45,7 @@ function App() {
           images={images}
         />
       </ButtonWrapper>
-
     </div>
-
   );
 }
 

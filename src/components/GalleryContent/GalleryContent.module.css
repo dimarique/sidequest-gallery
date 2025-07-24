@@ -1,5 +1,6 @@
 .galleryContent {
-  background-color: lightgrey;
+  background-color: black;
+  padding: 20px 60px;
 }
 
 .galleryContent img {

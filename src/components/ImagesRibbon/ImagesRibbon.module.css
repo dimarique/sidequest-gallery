@@ -7,8 +7,9 @@
   max-width: 100%;
   gap: 4px;
   margin-bottom: 20px;
+  padding-bottom: 5px;
   align-items: center;
-  background-color: lightgrey;
+  background-color: black;
 }
 
 .img {

@@ -9,7 +9,6 @@ import PlayStopButton from "./components/PlayStopButton/PlayStopButton";
 import ButtonWrapper from "./components/ButtonWrapper/ButtonWrapper";
 import ImagesRibbon from "./components/ImagesRibbon/ImagesRibbon";
 import LoginForm from "./components/LoginForm/LoginForm";
-import Favorites from "./components/Favorites/Favorites";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +21,6 @@ function App() {
   return (
     <div className="content_wrapper">
       <LoginForm />
-      <Favorites imageId={images[currentIndex]} />
       <GalleryContent
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
@@ -46,9 +44,7 @@ function App() {
           images={images}
         />
       </ButtonWrapper>
-
     </div>
-
   );
 }
 

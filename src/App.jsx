@@ -9,7 +9,6 @@ import PlayStopButton from "./components/PlayStopButton/PlayStopButton";
 import ButtonWrapper from "./components/ButtonWrapper/ButtonWrapper";
 import ImagesRibbon from "./components/ImagesRibbon/ImagesRibbon";
 import LoginForm from "./components/LoginForm/LoginForm";
-import Favorites from "./components/Favorites/Favorites";
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
